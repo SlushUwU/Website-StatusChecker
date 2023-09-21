@@ -1,0 +1,11 @@
+[Unit]
+Description=GatewayPing Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/GatewayPing
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

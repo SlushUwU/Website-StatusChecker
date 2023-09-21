@@ -1,0 +1,15 @@
+#!/bin/sh
+# postinst script for gatewayping
+
+# Service-Datei in das Verzeichnis /etc/systemd/system/ kopieren
+cp -v "$(dpkg -L gatewayping | grep /gatewayping.service)" /etc/systemd/system/
+
+# Aktualisiere systemd-Dienste
+systemctl daemon-reload
+
+# Starte und aktiviere den Service
+systemctl enable gatewayping.service
+systemctl start gatewayping.service
+
+# Fertig
+exit 0

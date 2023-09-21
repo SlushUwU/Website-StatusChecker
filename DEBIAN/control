@@ -1,0 +1,8 @@
+Package: GatewayPing
+Architecture: all
+Maintainer: @Slush
+Priority: high
+Version: 0.1
+Description: This is a lightweight C# program that pings all the Gateway Servers every ~5 minutes and reports their status. It will soon also control our routings on Cloudflare.
+Homepage: https://kitsune.exposed
+Depends: dotnet-sdk-6.0, libc6 
