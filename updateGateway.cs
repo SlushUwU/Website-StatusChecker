@@ -9,7 +9,7 @@ namespace GatewayPing
         {
 
             string from = "status@satowa-network.eu";
-            string to = "";
+            string to = "it@satowa-network.eu";
 
             MailMessage message = new MailMessage(from, to);
             message.Subject = "Down";
