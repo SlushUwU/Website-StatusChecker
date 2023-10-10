@@ -26,12 +26,13 @@ namespace GatewayPing
                 new { Name = "Gateway Innsbruck 02", Host = "gateway-il-02.satowa-network.eu" },
                 new { Name = "Gateway Frankfurt", Host = "gateway-f-100.satowa-network.eu" }
             };
-
+            int hostCount = 0;
             foreach (var gateway in gateways)
             {
                 if (pingTest(gateway.Host) && await statusCheck($"https://{gateway.Host}/"))
                 {
                     Console.WriteLine($"{gateway.Name} is Up...");
+                    hostCount++;
                     Thread.Sleep(300000); // Wait for ~5 minutes
                     continue; // Move on to the next gateway
                 }
