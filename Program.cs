@@ -7,16 +7,18 @@ namespace GatewayPing
 {
     class Project
     {
+        
         /// <summary>
         /// Main class that includes, routes and provides all important features and connection
         /// </summary>
         /// <param name="args"></param>
         /// <returns>
         /// Up = Gateway ${Gateway} is up
-        /// Down = GAteway ${Gateway} is down
+        /// Down = Gateway ${Gateway} is down
         /// </returns>
         static async Task Main(string[] args)
         {
+            
             // Define the gateway information
             var gateways = new[]
             {
@@ -61,7 +63,6 @@ namespace GatewayPing
                     Console.Write(response);
                     return false;
                 }
-
                 return true;
             }
         }
