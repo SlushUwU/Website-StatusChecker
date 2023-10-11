@@ -62,7 +62,7 @@ namespace GatewayPing
                 if (!response.IsSuccessStatusCode)
                 {
                     Console.Write(response);
-                    updateGateway.update(host, "NaN");
+                    await UpdateGateway.Update("NaN", host);
                 }
                 return true;
             }
